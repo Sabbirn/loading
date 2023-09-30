@@ -1,0 +1,69 @@
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-image: linear-gradient(to right top, #29e102, #71e300, #9be400, #bee400, #dce400, #ead700, #f5ca00, #ffbc00, #ff9e00, #ff7d00, #ff5500, #ff0d0d);
+}
+
+
+/* main div start */
+.container{
+    position: relative;
+    width: 200px;
+    height: 200px;
+}
+/* main div end */
+
+
+/* text div start */
+.text{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    text-align: center;
+    line-height: 200px;
+    font-size: 25px;
+    font-family: sans-serif;
+    font-weight: bold;
+}
+/* text animation start */
+.waviy span {
+    display: inline-block;
+    animation: waviy 1s infinite;
+    animation-delay: calc(.1s * var(--i));
+    
+  }
+  @keyframes waviy {
+    0%,40%,100% {
+      transform: translateY(0)
+    }
+    20% {
+      transform: translateY(-20px)
+    }
+  }
+/* text animation end */
+/* text div end */
+
+
+/* ring div start */
+.ring{
+    width: 100%;
+    height: 100%;
+    border-left: 4px solid rgba(0, 0, 0, 0.89);
+    border-radius: 50%;
+    animation: load 1s linear infinite;
+}
+/* ring animation start */
+@keyframes load {
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+/* ring animation end */
+/* ring div end */
